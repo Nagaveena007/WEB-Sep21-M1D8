@@ -57,7 +57,7 @@
 
       const changeTitle = function (newTitle) {
        let titleChange=document.querySelector("h1")
-       titleChange.style.backgroundColor = "green";
+       titleChange.innerText = "newTitle";
 
       };
 
@@ -66,7 +66,7 @@
       */
 
       const addClassToTitle = function () {
-        document.getElementById("demo.id").classList.add('MyClass');
+        document.getElementById("demo.id").classList.add('myHeading');
 
         
         //
@@ -114,6 +114,7 @@
 	  newP.appendChild(textNode);
       document.getElementById("firstP").appendChild(newP); 
       };
+      //document.querySelector('div')
 
       /* EXERCISE 7
        Write a function for making the first unordered list disappear.
@@ -122,6 +123,7 @@
       const firstUlDisappear = function () {
         //firstList
         document.getElementById('firstList').style.display='none'
+      
       };
 
       /* EXERCISE 8
@@ -129,26 +131,24 @@
       */
 
       const paintItGreen = function () {
-        //
-        document.querySelectorAll('ul').style.backgroundColor='green'
-        //document.querySelector("body").style.backgroundColor = "green";
-
+        document.querySelectorAll('ul').style.backgroundColor="green"
       };
-
+      paintItGreen()
       /* EXERCISE 9
        Make the heading of the page change color every time the user clicks on it.
       */
-
-      const makeItClickable = function () {
-        //
-      };
-
+const makeItClickable =function () {
+document.querySelector('h1').addEventListener("click",function(e){
+  e.target.classList.toggle('myHeading')
+})
+}
+makeItClickable()
       /* EXERCISE 10
        Change the footer text with something else when the user clicks on it.
       */
 
       const changeFooterText = function () {
-        //
+      document.querySelector('footer').innerText('BOOOOM')
       };
 
       /* EXERCISE 11
@@ -157,6 +157,9 @@
 
       const inputField = document.getElementById("input-field");
       // ...
+      inputField.addEventListener('keypress',function(e){
+        console.log(e.target.value)
+      })
 
       /* EXERCISE 12
        Create a welcome alert message when the page successfully loads.
