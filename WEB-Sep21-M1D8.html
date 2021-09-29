@@ -30,7 +30,7 @@
 
       <a href="strive.school" id="urllink" onclick="changeUrls()">This link goes to Strive School</a>
 
-      <div>
+      <div id="firstP">
         <p>This text is just for the exercise</p>
       </div>
 
@@ -109,7 +109,10 @@
 
       const addParagraph = function (content) {
         //
-        
+       let newP = document.createElement("p"); 
+	  let textNode = document.createTextNode(" This is a new text node"); 
+	  newP.appendChild(textNode);
+      document.getElementById("firstP").appendChild(newP); 
       };
 
       /* EXERCISE 7
@@ -117,7 +120,8 @@
       */
 
       const firstUlDisappear = function () {
-        //
+        //firstList
+        document.getElementById('firstList').style.display='none'
       };
 
       /* EXERCISE 8
