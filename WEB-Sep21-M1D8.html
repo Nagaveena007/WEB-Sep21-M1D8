@@ -1,11 +1,22 @@
 <html>
   <head>
     <style>
+      body{
+        background-color: aquamarine;
+        vertical-align: middle;
+      }
+input{
+  border-radius: 0.4rem;
+  background-color: chartreuse;
+}
       .myHeading {
-        color: red;
+        color: rgb(61, 8, 92);
       }
       .b-green {
-          background-color: green;
+          background-color: chartreuse;
+        }
+        h1{
+color: crimson;
         }
     </style>
   </head>
@@ -60,9 +71,10 @@
 
       const changeTitle = function (newTitle) {
        let titleChange=document.querySelector("h1")
-       titleChange.innerText = "newTitle";
+       titleChange.innerHTML=(`${newTitle}`);
       };
-      changeTitle()
+      //changeTitle("Hi,am new here")
+
       /* EXERCISE 2
        Write a function for changing the class of the title of the page in "myHeading".
       */
